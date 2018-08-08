@@ -1,0 +1,27 @@
+// types
+// doc
+
+typedef struct _neural_node NODE;
+typedef struct _neural OPERATIONS;
+typedef struct _neural SQL;
+typedef struct _neural TEST;
+typedef struct _neural DOC;
+typedef double long ID;
+
+struct _neural {
+  ID id;
+  DOC description;
+  NODE *dimension[NEURAL_ARRAY]; 
+};
+
+struct _neural_node {
+  ID id;
+  DOC description;
+  NODE *up;
+  NODE *down;
+  NODE *left;
+  NODE *right;
+  NODE dimension[NEURAL_DIMENSION];
+};
+
+
